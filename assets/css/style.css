@@ -5,3 +5,7 @@ header,
 footer {background-color:#ffffff}
 
 footer{padding:20px;}
+
+.social {
+  width: 100px;
+}

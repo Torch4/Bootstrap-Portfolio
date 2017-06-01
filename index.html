@@ -15,7 +15,8 @@
 <div class="row">
 <div class="column-lg-12">
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <!-- the container is actually supposed to be the outer-most element and hold all of the rows,
+       you don't need to put another one here -->
     <div class="navbar-header">
       <a class="navbar-brand" href="#">Adrian Fahrer</a>
     </div>
@@ -25,32 +26,34 @@
       <li><a href="#">Portfolio</a></li>
       <li><a href="#">Contact</a></li>
       </ul>
-      </div>
       </nav>
       </div>
       </div>
-	<div class="container">
+      <!-- same as above with this container -->
 		<div class="row">
-			<div class="column-md-7">
+      <!-- the bootstrap class is col-md-7, not column-md-7 -->
+			<div class="col-md-7">
 				<h1 id="about">About Me</h1>
 					<img src="assets/images/cat.jpg" class="img-rounded" alt="Cat" style="width:25%" style="max-width: 250px">
 						<p>Marshmallow jelly souffl&eacute; pastry biscuit gummi bears tootsie roll tootsie roll gingerbread. Cotton candy muffin gingerbread fruitcake. Sweet roll souffl&eacute; topping wafer croissant oat cake gummi&nbsp;bears.</p>
 
 						<p>Jelly-o cheesecake dessert fruitcake ice cream brownie liquorice souffl&eacute;. Caramels biscuit gummi bears tiramisu chupa chups. Croissant macaroon cotton candy cake pudding.</p>
 
+            
+      </div> <!-- the col-md-7 needs to be closed before starting another column -->
 					
-          <div class="column-md-5">
+          <div class="col-md-5">
 							<div id="connect">
-							<h2>Connect with Me</h2>
-								<a href="#"><img src="assets/images/github-128.png" class="social" alt="GitHub" style="width:50%"</a>
-                            		<a href="#"><img src="assets/images/linkedin-128.png" class="social" alt="LinkedIn" style="width:50%"</a>
-        								<a href="#"><img src="assets/images/stackoverflow-128.png" class="social" alt="Stack Overflow" style="width:50%"></a>
+                <h2>Connect with Me</h2>
+                <!-- some of these image tags were not closed -->
+                <a href="#"><img src="assets/images/github-128.png" class="social" alt="GitHub" /></a>
+                <!-- avoid using style= arguments in html tags, you should declare these on stylesheets using classes -->
+                <a href="#"><img src="assets/images/linkedin-128.png" class="social" alt="LinkedIn" /></a>
+                <a href="#"><img src="assets/images/stackoverflow-128.png" class="social" alt="Stack Overflow" ></a>
+              </div>
       
       </div>
-      </div></div>
-     <div class="container">
-     <div class="row">
-     <div class="column-lg-12">
+      <!-- none of these divs are closed with </div> tags -->
 
     <div class="footer">
       Copyright &copy; 2016 Adrian
